@@ -32,6 +32,8 @@ gem 'net-smtp'
 gem 'pry-byebug'
 
 gem 'devise'
+gem 'rails-i18n', '~> 6.0'
+gem 'devise-i18n'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
