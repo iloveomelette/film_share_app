@@ -1,22 +1,26 @@
 class PostsController < ApplicationController
-  def index
-  end
+  def index; end
 
-  def show
-  end
+  def show; end
 
   def new
+    @post = Post.new
   end
 
   def create
+    current_user.posts.create!(post_params)
+    redirect_to root_path
   end
 
-  def edit
-  end
+  def edit; end
 
-  def update
-  end
+  def update; end
 
-  def destroy
+  def destroy; end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :content, :recommendation)
   end
 end
