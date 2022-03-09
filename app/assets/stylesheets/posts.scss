@@ -2,12 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+/* #### 変数 #### */
+$post_bg_color: #cac8c8;
+
 /* #### 新規、編集投稿スタイル #### */
 @mixin post-margin {
   margin: 30px 0 0 40px;
 }
 .post-container {
-  border: 4px outset #cac8c8;
+  border: 4px outset $post_bg_color;
   border-radius: 1rem;
   h3 {
     margin-bottom: 10px;
@@ -24,5 +27,23 @@
   .submit {
     margin: 40px 0 30px;
     text-align: center;
+  }
+}
+
+/* #### 一覧表示ページ #### */
+.index-post {
+  background-color: $post_bg_color;
+  .post-header {
+    display: flex;
+    a {
+      display: inline-block;
+      margin-top: 16px;
+    }
+  }
+  .index-show {
+    text-align: right;
+    a {
+      display: inline-block;
+    }
   }
 }
