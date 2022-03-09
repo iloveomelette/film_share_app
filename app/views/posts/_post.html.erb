@@ -1,0 +1,10 @@
+<main class="index-post">
+  <div class="post-header">
+    <p>ユーザネーム</p>
+    <p class="index-recommendation">お勧め度: <%= post.recommendation %></p>
+    <%= link_to '編集', edit_post_path(post) %>
+  </div>
+  <%= post.title %>
+  <p>あらすじ</p>
+  <div class="index-show"><%= link_to '詳しく見る', post_path(post) %></div>
+</main>
