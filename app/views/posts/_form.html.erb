@@ -1,0 +1,19 @@
+<div class="post-container">
+  <%= form_with model: @post, local: true do |form| %>
+    <div class="post-title">
+      <h3>タイトル</h3>
+        <%= form.text_field :title, presence: true %>
+    </div>
+    <div class="post-content">
+      <h3>内容</h3>
+        <%= form.text_area :content, presence: true %>
+    </div>
+    <div class="recommendation">
+      <h3>お勧め度</h3>
+        <%= form.text_field :recommendation, presence: true %>
+    </div>
+    <div class="submit">
+        <%= form.submit '投稿する' %>
+    </div>
+  <% end %>
+</div>
