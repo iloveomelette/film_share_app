@@ -47,3 +47,28 @@ $post_bg_color: #cac8c8;
     }
   }
 }
+
+/* #### 詳細表示ページ #### */
+.show-container {
+  background-color: $post_bg_color;
+  .edit-path {
+    text-align: right;
+    margin-right: 40px;
+    a {
+      display: inline-block;
+    }
+  }
+  h3 {
+    margin-bottom: 12px;
+  }
+  div {
+    margin-left: 40px;
+  }
+  .show-title {
+    display: flex;
+    justify-content: space-between;
+    p {
+      margin-right: 40px;
+    }
+  }
+}

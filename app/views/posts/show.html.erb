@@ -1,2 +1,17 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<main class="show-container">
+  <div class="edit-path"><%= link_to '編集', edit_post_path(@post) %></div>
+  <p>image</p>
+  <div class="show-title">
+    <h3>タイトル</h3>
+    <p>おすすめ <%= @post.recommendation %></p>
+  </div>
+  <div><%= @post.title %></div>
+  <div>
+    <h3>あらすじ</h3>
+    <p>あらすじ</p>
+  </div>
+  <div>
+    <h3>内容</h3>
+    <p><%= @post.content %></p>
+  </div>
+</main>
