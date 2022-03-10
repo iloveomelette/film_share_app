@@ -74,4 +74,11 @@ $post_bg_color: #cac8c8;
       margin-right: 40px;
     }
   }
+  .post-destroy {
+    text-align: center;
+    margin: 30px auto;
+    a {
+      display: inline-block;
+    }
+  }
 }
