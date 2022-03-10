@@ -1,6 +1,10 @@
 <main class="show-container">
   <div class="edit-path"><%= link_to '編集', edit_post_path(@post) %></div>
-  <p>image</p>
+  <div class="image-box">
+    <% if @post.image? %>
+      <%= image_tag @post.image.url %>
+    <% end %>
+  </div>
   <div class="show-title">
     <h3>タイトル</h3>
     <p>おすすめ <%= @post.recommendation %></p>

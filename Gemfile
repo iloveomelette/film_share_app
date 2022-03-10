@@ -35,6 +35,9 @@ gem 'devise'
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 
+gem 'carrierwave', '~> 2.0'
+gem 'mini_magick'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

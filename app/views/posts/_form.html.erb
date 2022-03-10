@@ -1,16 +1,20 @@
 <div class="post-container">
   <%= form_with model: @post, local: true do |form| %>
-    <div class="post-title">
+    <div class="post-margin">
       <h3>タイトル</h3>
         <%= form.text_field :title, presence: true %>
     </div>
-    <div class="post-content">
+    <div class="post-margin">
       <h3>内容</h3>
         <%= form.text_area :content, presence: true %>
     </div>
-    <div class="recommendation">
+    <div class="post-margin">
       <h3>お勧め度</h3>
         <%= form.text_field :recommendation, presence: true %>
+    </div>
+    <div class="post-margin">
+      <h3>画像選択</h3>
+      <%= form.file_field :image, accept: 'image/jpg image/jpeg image/gif image/png' %>
     </div>
     <div class="submit">
         <%= form.submit '投稿する' %>
