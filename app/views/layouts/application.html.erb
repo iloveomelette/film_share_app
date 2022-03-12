@@ -11,9 +11,8 @@
   </head>
 
   <body>
-    <header>
-      <%= link_to '投稿する', new_post_path %>
-      <%= link_to 'ログイン', new_user_session_path %>
+    <header class="header">
+      <%= render 'layouts/header' %>
     </header>
     <div class="container">
       <%= yield %>
