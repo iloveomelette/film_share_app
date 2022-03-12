@@ -12,6 +12,39 @@ $post_bg_color: #cac8c8;
   border: 4px outset $post_bg_color;
   border-radius: 1rem;
 }
+@mixin nav-link {
+  text-decoration: none;
+  color: white;
+}
+li {
+  list-style-type: none;
+}
+input {
+  height: 30px;
+  margin-top: 10px;
+}
+
+/* #### ヘッダー #### */
+.header {
+  background-color: #1c1616;
+  height: 80px;
+  li {
+    color: white;
+    margin: 10px 0 0 10px;
+  }
+  .header-container {
+    height: 100%;
+    align-items: center;
+  }
+  .title-link {
+    @include nav-link;
+  }
+  .nav-link {
+    @include nav-link;
+    margin: 10px 0 0 10px;
+    font-size: 1.15rem;
+  }
+}
 /* #### 新規、編集投稿スタイル #### */
 .post-container {
   @include post-card;
