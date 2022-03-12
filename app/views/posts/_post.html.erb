@@ -6,5 +6,12 @@
   </div>
   <%= post.title %>
   <p>あらすじ</p>
-  <div class="index-show"><%= link_to '詳しく見る', post_path(post) %></div>
+  <div class="index-show">
+    <% if post.liked_by?(current_user) %>
+      <%= render 'like', post: post %>
+    <% else %>
+      <%= render 'dislike', post: post %>
+    <% end %>
+    <%= link_to '詳しく見る', post_path(post) %>
+  </div>
 </main>
