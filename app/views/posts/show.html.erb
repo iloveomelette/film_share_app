@@ -18,5 +18,10 @@
     <h3>内容</h3>
     <p><%= @post.content %></p>
   </div>
+  <% if @post.liked_by?(current_user) %>
+    <%= render 'like', post: @post %>
+  <% else %>
+    <%= render 'dislike', post: @post %>
+  <% end %>
   <div class="post-destroy"><%= link_to '削除', post_path(@post), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %></div>
 </main>
