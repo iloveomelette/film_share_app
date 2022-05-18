@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'posts#index'
+  root 'homes#top'
   resources :posts do
     resource :likes, only: %i[create destroy]
   end
